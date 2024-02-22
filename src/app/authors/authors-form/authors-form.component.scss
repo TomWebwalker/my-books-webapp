@@ -1,0 +1,12 @@
+form {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+}
+
+.form-actions {
+  display: flex;
+  &>*:not(:last-child) {
+    margin-right: 8px;
+  }
+}

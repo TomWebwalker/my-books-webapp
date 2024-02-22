@@ -1,0 +1,9 @@
+.container {
+  display: block;
+  height: calc(100vh - 64px);
+  overflow: hidden;
+}
+
+mat-sidenav {
+  width: 200px;
+}

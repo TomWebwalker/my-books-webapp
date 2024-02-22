@@ -1,0 +1,24 @@
+<form [formGroup]="form" (ngSubmit)="formSubmittedHandler()">
+
+  <mat-form-field>
+    <mat-label>First name</mat-label>
+    <input matInput formControlName="firstName">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Last name</mat-label>
+    <input matInput formControlName="lastName">
+  </mat-form-field>
+
+  <div class="form-actions">
+    <button [disabled]="pending" mat-raised-button color="primary" type="submit">
+      @if (pending) {
+        <mat-spinner></mat-spinner>
+      }
+      Create
+    </button>
+    <button mat-raised-button>Cancel</button>
+
+  </div>
+
+</form>

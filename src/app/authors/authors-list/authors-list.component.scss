@@ -1,0 +1,38 @@
+:host {
+  display: block;
+  width: 800px;
+  max-width: 100%;
+}
+
+.list-item {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ededed;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 8px 16px;
+  margin-bottom: 8px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  h2, h5 {
+    margin-right: 8px;
+  }
+}
+
+mat-spinner {
+  margin: 0 auto;
+  display: block;
+}
+
+.line-options {
+  margin-left: auto;
+}
+
+.view-options {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 8px;
+}
+

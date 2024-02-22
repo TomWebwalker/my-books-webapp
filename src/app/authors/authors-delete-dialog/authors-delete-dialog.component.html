@@ -1,0 +1,7 @@
+<mat-dialog-content>
+  <p>Are You sure You want to delete this author?</p>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button (click)="closeDialogHandler(false)">Cancel</button>
+  <button mat-button color="warn" (click)="closeDialogHandler(true)">Delete</button>
+</mat-dialog-actions>

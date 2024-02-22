@@ -1,1 +1,184 @@
-/* You can add global styles to this file, and also import other style files */
+@use '@angular/material' as mat;
+
+@include mat.core();
+
+$lemon-chiffon: #fbf2c0ff;
+$taupe: #48392aff;
+$bistre: #43281cff;
+$brown-sugar: #c06e52ff;
+$bittersweet: #f96f5dff;
+
+$lemon-chiffon-palette: (
+  50: $lemon-chiffon,
+  100: $lemon-chiffon,
+  200: $lemon-chiffon,
+  300: $lemon-chiffon,
+  400: $lemon-chiffon,
+  500: $lemon-chiffon,
+  600: $lemon-chiffon,
+  700: $lemon-chiffon,
+  800: $lemon-chiffon,
+  900: $lemon-chiffon,
+  A100: $lemon-chiffon,
+  A200: $lemon-chiffon,
+  A400: $lemon-chiffon,
+  A700: $lemon-chiffon,
+  contrast: (
+    50: white,
+    100: white,
+    200: white,
+    300: white,
+    400: white,
+    500: black,
+    600: black,
+    700: black,
+    800: black,
+    900: black,
+    A100: white,
+    A200: white,
+    A400: black,
+    A700: black,
+  )
+);
+
+$taupe-palette: (
+  50: $taupe,
+  100: $taupe,
+  200: $taupe,
+  300: $taupe,
+  400: $taupe,
+  500: $taupe,
+  600: $taupe,
+  700: $taupe,
+  800: $taupe,
+  900: $taupe,
+  A100: $taupe,
+  A200: $taupe,
+  A400: $taupe,
+  A700: $taupe,
+  contrast: (
+    50: black,
+    100: black,
+    200: black,
+    300: black,
+    400: black,
+    500: white,
+    600: white,
+    700: white,
+    800: white,
+    900: white,
+    A100: white,
+    A200: white,
+    A400: black,
+    A700: black,
+  )
+);
+
+$bistre-palette: (
+  50: $bistre,
+  100: $bistre,
+  200: $bistre,
+  300: $bistre,
+  400: $bistre,
+  500: $bistre,
+  600: $bistre,
+  700: $bistre,
+  800: $bistre,
+  900: $bistre,
+  A100: $bistre,
+  A200: $bistre,
+  A400: $bistre,
+  A700: $bistre,
+  contrast: (
+    50: black,
+    100: black,
+    200: black,
+    300: black,
+    400: black,
+    500: white,
+    600: white,
+    700: white,
+    800: white,
+    900: white,
+    A100: white,
+    A200: white,
+    A400: black,
+    A700: black,
+  )
+);
+
+
+$my-books-app-mat-primary: mat.define-palette($bistre-palette);
+$my-books-app-mat-accent: mat.define-palette($taupe-palette);
+$my-books-app-mat-warn: mat.define-palette(mat.$red-palette);
+$my-books-app-mat-theme: mat.define-light-theme((
+  color: (
+    primary: $my-books-app-mat-primary,
+    accent: $my-books-app-mat-accent,
+    warn: $my-books-app-mat-warn,
+  )
+));
+@include mat.all-component-themes($my-books-app-mat-theme);
+
+html {
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 0
+}
+
+.page-title {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+button:has(mat-spinner) {
+  .mdc-button__label {
+    display: flex !important;
+    flex-direction: row;
+  }
+
+  .mat-mdc-progress-spinner {
+    height: 16px !important;
+    width: 16px !important;
+    margin-right: 8px;
+  }
+}
+
+mat-toolbar {
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+
+  & > div {
+    flex: 1;
+  }
+
+  & > div:nth-child(2) {
+    display: flex;
+    justify-content: center;
+  }
+
+  & > div:nth-child(3) {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.form-actions {
+  display: flex;
+
+  button {
+    margin-right: 8px;
+  }
+}
