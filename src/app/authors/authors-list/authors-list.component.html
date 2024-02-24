@@ -7,20 +7,20 @@
   <mat-spinner></mat-spinner>
 } @else {
 
-<!--  @for (author of authors$ | async; track author.id) {-->
-<!--    <div class="list-item">-->
-<!--      <h2>{{ author.lastName }}</h2>-->
-<!--      <h5>{{ author.firstName }}</h5>-->
-<!--      <small>({{ author.totalBooks }})</small>-->
-<!--      <div class="line-options">-->
-<!--        <button mat-icon-button color="warn" (click)="deleteAuthorHandler(author.id)">-->
-<!--          <mat-icon>delete_forever</mat-icon>-->
-<!--        </button>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  } @empty {-->
-<!--    <div class="list-item">-->
-<!--      <h2>No authors found</h2>-->
-<!--    </div>-->
-<!--  }-->
+  @for (author of authors$ | async; track author.id) {
+    <div class="list-item">
+      <h2>{{ author.lastName }}</h2>
+      <h5>{{ author.firstName }}</h5>
+      <small>({{ author.totalBooks }})</small>
+      <div class="line-options">
+        <button mat-icon-button color="warn" (click)="deleteAuthorHandler(author.id)">
+          <mat-icon>delete_forever</mat-icon>
+        </button>
+      </div>
+    </div>
+  } @empty {
+    <div class="list-item">
+      <h2>No authors found</h2>
+    </div>
+  }
 }

@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { Store } from '@ngrx/store';
 
 @Component({
   selector: 'app-authors-page',
@@ -9,4 +10,6 @@ import { RouterOutlet } from '@angular/router';
     <router-outlet />`,
   styleUrl: './authors-page.component.scss',
 })
-export default class AuthorsPageComponent {}
+export default class AuthorsPageComponent {
+
+}

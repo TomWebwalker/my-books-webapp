@@ -1,7 +1,7 @@
 import { inject, Injectable } from '@angular/core';
 import { API_URL } from '../const';
 import { Observable } from 'rxjs';
-import { Author, AuthorCreateRequest } from './types/author';
+import { Author, AuthorCreateRequest } from './types';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable({
