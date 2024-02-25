@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AuthorsPageComponent } from './authors-page.component';
+import AuthorsPageComponent from './authors-page.component';
 
 describe('AuthorsPageComponent', () => {
   let component: AuthorsPageComponent;
@@ -11,7 +11,7 @@ describe('AuthorsPageComponent', () => {
       imports: [AuthorsPageComponent]
     })
     .compileComponents();
-    
+
     fixture = TestBed.createComponent(AuthorsPageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
